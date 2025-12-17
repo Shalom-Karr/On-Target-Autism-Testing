@@ -8,7 +8,7 @@
     <!-- ADVANCED SEO META TAGS -->
     <title>ADOS-2 Autism Testing & Diagnosis (No Waitlist) | UT & OH | On Target ABA</title>
     <meta name="description" content="Comprehensive ADOS-2 Autism evaluations for toddlers and children. Immediate availability in Salt Lake City, Utah & Columbus, Ohio. We accept Medicaid, Cigna, & Aetna. Get answers in 7 days.">
-    <meta name="keywords" content="Autism Testing Utah, ADOS-2 Assessment Ohio, Signs of Autism in Toddlers, Autism Diagnosis Columbus, Child Psychologist Murray UT, ADOS-2 vs CARS, Medicaid Autism Testing, Early Intervention Diagnosis">
+    <meta name="keywords" content="Autism Testing Utah, ADOS-2 Assessment Ohio, Signs of Autism in Toddlers, Autism Diagnosis Columbus, Child Psychologist Murray UT, Medicaid Autism Testing">
     <meta name="author" content="On Target ABA Clinical Team">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://ontargetaba.com/autism-testing">
@@ -21,26 +21,9 @@
     <meta property="og:image" content="https://ontargetaba.com/images/og-testing-guide.jpg">
     <meta property="og:url" content="https://ontargetaba.com/autism-testing">
 
-    <!-- JSON-LD ADVANCED SCHEMA (MedicalWebPage + FAQ + LocalBusiness) -->
+    <!-- JSON-LD ADVANCED SCHEMA -->
     <script type="application/ld+json">
     [
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Autism Testing & Diagnosis Services",
-        "lastReviewed": "2023-10-15",
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Clinical Director"
-        },
-        "description": "Comprehensive guide to ADOS-2 autism testing, symptoms by age, and insurance coverage.",
-        "medicalAudience": "Parents",
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Autism Spectrum Disorder",
-          "alternateName": "ASD"
-        }
-      },
       {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
@@ -141,18 +124,11 @@
         .skip-link { position: absolute; top: -40px; left: 0; background: #009ec3; color: white; padding: 8px; z-index: 100; transition: top 0.3s; }
         .skip-link:focus { top: 0; }
         
-        /* Typography Scale for SEO */
-        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3rem); }
-        
         /* Interactive Elements */
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
         .accordion-content { transition: max-height 0.4s cubic-bezier(0, 1, 0, 1); max-height: 0; overflow: hidden; }
         .accordion-content.active { max-height: 1000px; transition: max-height 0.4s ease-in-out; }
         .accordion-icon { transition: transform 0.3s ease; }
-        
-        /* Sticky Table of Contents */
-        .toc-active { color: #009ec3; border-left: 3px solid #009ec3; font-weight: 700; background: #f0f9ff; }
         
         /* Tab System */
         .tab-btn.active { background-color: #009ec3; color: white; border-color: #009ec3; }
@@ -161,6 +137,9 @@
         
         /* Animations */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse-ring { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 158, 195, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 158, 195, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 158, 195, 0); } }
+        
+        .btn-pulse { animation: pulse-ring 2s infinite; }
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .is-visible { opacity: 1; transform: translateY(0); }
         
@@ -169,7 +148,7 @@
     </style>
 </head>
 
-<body class="font-body text-dark-text bg-white overflow-x-hidden selection:bg-primary-cyan selection:text-white">
+<body class="font-body text-dark-text bg-white overflow-x-hidden selection:bg-primary-cyan selection:text-white pb-16 lg:pb-0">
 
     <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -203,14 +182,14 @@
                     ON TARGET <span class="text-dark-text">ABA</span>
                 </a>
 
-                <!-- Semantic Desktop Nav -->
+                <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-8 text-sm font-bold uppercase tracking-wide">
                     <a href="#about-ados" class="hover:text-primary-cyan transition">About ADOS-2</a>
-                    <a href="#symptoms-guide" class="hover:text-primary-cyan transition">Symptoms by Age</a>
-                    <a href="#process" class="hover:text-primary-cyan transition">The Process</a>
-                    <a href="#insurance-cost" class="hover:text-primary-cyan transition">Cost & Insurance</a>
+                    <a href="#symptoms-guide" class="hover:text-primary-cyan transition">Symptoms</a>
+                    <a href="#process" class="hover:text-primary-cyan transition">Process</a>
+                    <a href="#insurance-cost" class="hover:text-primary-cyan transition">Insurance</a>
                     <a href="#locations" class="hover:text-primary-cyan transition">Locations</a>
-                    <a href="#contact" class="bg-primary-cyan text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg transform hover:scale-105">
+                    <a href="#contact" class="bg-primary-cyan text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg btn-pulse transform hover:scale-105">
                         Book Assessment
                     </a>
                 </div>
@@ -241,25 +220,9 @@
         </div>
     </header>
 
-    <main id="main-content" class="relative">
+    <main id="main-content">
         
-        <!-- Sticky Table of Contents (Desktop Only) -->
-        <aside class="hidden xl:block fixed left-4 top-1/3 z-30 w-56 bg-white p-4 rounded-xl shadow-lg border border-gray-100 transform -translate-x-full transition-transform duration-300 hover:translate-x-0 group" id="toc-sidebar">
-            <div class="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 bg-white p-2 rounded-r-lg border-y border-r border-gray-100 shadow-sm cursor-pointer">
-                <svg class="w-4 h-4 text-primary-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </div>
-            <p class="text-xs font-bold text-gray-400 uppercase mb-3">Page Contents</p>
-            <nav class="space-y-1 text-sm">
-                <a href="#about-ados" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">The ADOS-2 Test</a>
-                <a href="#symptoms-guide" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">Symptoms Checklist</a>
-                <a href="#process" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">The Timeline</a>
-                <a href="#insurance-cost" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">Insurance Coverage</a>
-                <a href="#locations" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">Locations</a>
-                <a href="#faq" class="block p-2 rounded text-gray-600 hover:bg-soft-blue transition">FAQs</a>
-            </nav>
-        </aside>
-
-        <!-- Hero Section: Enhanced for SEO and Conversion -->
+        <!-- Hero Section -->
         <section class="relative pt-24 pb-20 lg:pt-32 lg:pb-32 bg-light-bg overflow-hidden">
             <div class="absolute top-0 right-0 w-2/3 h-full bg-soft-blue opacity-50 rounded-l-[100px] transform translate-x-1/4 -skew-x-6 z-0"></div>
             
@@ -270,12 +233,15 @@
                             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                             Now Accepting New Patients: UT & OH
                         </div>
-                        <h1 class="font-heading font-extrabold leading-tight mb-6 text-dark-text">
-                            Comprehensive <br>
-                            <span class="text-primary-cyan">Autism Testing & Diagnosis</span> (ADOS-2)
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-tight mb-6 text-dark-text">
+                            Answers You Need.<br>
+                            <span class="text-primary-cyan relative">
+                                Care They Deserve.
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-accent-yellow opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="5" fill="none"/></svg>
+                            </span>
                         </h1>
-                        <h2 class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg font-medium">
-                            Don't wait 6-12 months for answers. We provide gold-standard autism evaluations with results in 7 days.
+                        <h2 class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg font-medium">
+                            Don't wait 6-12 months for answers. We provide gold-standard <strong>ADOS-2 Autism Diagnostic Evaluations</strong> with results in 7 days.
                         </h2>
                         
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -297,8 +263,12 @@
                     </div>
                     
                     <div class="relative animate-on-scroll hidden lg:block">
-                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Child psychologist performing ADOS-2 autism test with blocks" class="rounded-3xl shadow-2xl border-8 border-white w-full object-cover aspect-[4/3]">
-                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
+                         <!-- Image Cluster -->
+                         <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white aspect-[4/3]">
+                            <img src="Child psychologist performing ADOS-2 autism test with blocks.png" alt="Child completing a puzzle with a therapist" class="w-full h-full object-cover" loading="eager">
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs z-20">
                             <div class="flex items-center gap-3 mb-2">
                                 <div class="bg-green-100 text-green-600 p-2 rounded-full">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -312,12 +282,27 @@
             </div>
         </section>
 
+        <!-- Trust Section -->
+        <section class="py-10 border-b border-gray-100 bg-white">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-gray-400 font-bold text-sm tracking-widest uppercase mb-6">Accepted Insurance Providers</p>
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">Medicaid</span>
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">Cigna</span>
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">Optum</span>
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">Aetna</span>
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">BlueCross</span>
+                    <span class="text-xl md:text-2xl font-bold font-heading text-gray-400">Molina</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Authority Content: What is ADOS-2? -->
         <section id="about-ados" class="py-24 bg-white scroll-mt-24">
             <div class="container mx-auto px-6 max-w-5xl">
                 <div class="text-center mb-16 animate-on-scroll">
                     <span class="text-primary-cyan font-bold tracking-wider text-sm uppercase">The Gold Standard</span>
-                    <h2 class="font-heading font-bold mb-6 mt-2">What is the ADOS-2 Assessment?</h2>
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6 mt-2">What is the ADOS-2 Assessment?</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                         The <strong>Autism Diagnostic Observation Schedule, Second Edition (ADOS-2)</strong> is widely considered the most accurate tool for diagnosing Autism Spectrum Disorder (ASD). It is not a simple "test" with right or wrong answers, but a semi-structured observation of communication, social interaction, and play.
                     </p>
@@ -346,54 +331,51 @@
                     </div>
                     
                     <div class="space-y-6 animate-on-scroll">
-                        <h3 class="text-xl font-bold">How it compares to other tests</h3>
+                        <h3 class="text-xl font-bold">Comparison to Screeners</h3>
                         <div class="border rounded-lg overflow-hidden shadow-sm">
                             <table class="w-full text-sm text-left">
                                 <thead class="bg-gray-50 text-gray-700 font-bold uppercase">
                                     <tr>
                                         <th class="px-6 py-3">Assessment</th>
                                         <th class="px-6 py-3">Type</th>
-                                        <th class="px-6 py-3">Accuracy</th>
+                                        <th class="px-6 py-3">Role</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-100">
                                     <tr class="bg-white">
                                         <td class="px-6 py-4 font-bold text-primary-cyan">ADOS-2</td>
                                         <td class="px-6 py-4">Clinical Observation</td>
-                                        <td class="px-6 py-4 font-bold text-green-600">Highest (Gold Standard)</td>
+                                        <td class="px-6 py-4 font-bold text-green-600">Medical Diagnosis</td>
                                     </tr>
                                     <tr class="bg-gray-50">
                                         <td class="px-6 py-4">CARS-2</td>
                                         <td class="px-6 py-4">Rating Scale</td>
-                                        <td class="px-6 py-4">High</td>
+                                        <td class="px-6 py-4">Severity Rating</td>
                                     </tr>
                                     <tr class="bg-white">
                                         <td class="px-6 py-4">M-CHAT</td>
-                                        <td class="px-6 py-4">Parent Questionnaire</td>
+                                        <td class="px-6 py-4">Questionnaire</td>
                                         <td class="px-6 py-4 text-yellow-600">Screening Only</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p class="text-sm text-gray-500 italic bg-gray-50 p-3 rounded">
-                            *Note: While the M-CHAT is a great screening tool for pediatricians, it cannot provide a formal medical diagnosis. An ADOS-2 evaluation is required for a complete diagnosis.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEO Feature: Detailed Symptoms by Age (Table) -->
+        <!-- Symptoms by Age (Table) -->
         <section id="symptoms-guide" class="py-24 bg-light-bg scroll-mt-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 animate-on-scroll">
-                    <h2 class="font-heading font-bold mb-4">Signs & Symptoms by Age</h2>
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Signs & Symptoms by Age</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Autism presents differently as a child grows. Use this guide to identify potential red flags.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Toddlers -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary-cyan animate-on-scroll">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary-cyan animate-on-scroll hover:-translate-y-2 transition duration-300">
                         <div class="flex items-center justify-between mb-6">
                             <h3 class="text-xl font-bold">Toddlers</h3>
                             <span class="bg-blue-100 text-primary-cyan px-3 py-1 rounded-full text-xs font-bold">12-24 Months</span>
@@ -407,13 +389,13 @@
                     </div>
 
                     <!-- Preschool -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-accent-yellow animate-on-scroll" style="transition-delay: 100ms">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-accent-yellow animate-on-scroll hover:-translate-y-2 transition duration-300" style="transition-delay: 100ms">
                         <div class="flex items-center justify-between mb-6">
                             <h3 class="text-xl font-bold">Preschool</h3>
                             <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold">2-5 Years</span>
                         </div>
                         <ul class="space-y-4 text-sm text-gray-700">
-                            <li class="flex gap-2"><svg class="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Delayed speech / Echolalia (repeating)</li>
+                            <li class="flex gap-2"><svg class="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Delayed speech / Echolalia</li>
                             <li class="flex gap-2"><svg class="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Difficulty playing "pretend"</li>
                             <li class="flex gap-2"><svg class="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Extreme tantrums over minor changes</li>
                             <li class="flex gap-2"><svg class="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Hand flapping or toe walking</li>
@@ -421,7 +403,7 @@
                     </div>
 
                     <!-- School Age -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500 animate-on-scroll" style="transition-delay: 200ms">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500 animate-on-scroll hover:-translate-y-2 transition duration-300" style="transition-delay: 200ms">
                         <div class="flex items-center justify-between mb-6">
                             <h3 class="text-xl font-bold">School Age</h3>
                             <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">6+ Years</span>
@@ -434,116 +416,55 @@
                         </ul>
                     </div>
                 </div>
-                
-                <div class="text-center mt-12">
-                     <a href="#contact" class="inline-flex items-center gap-2 text-primary-cyan font-bold hover:text-primary-dark transition border-b-2 border-primary-cyan pb-1">
-                         <span>Discuss your child's symptoms with a specialist</span>
-                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                     </a>
-                </div>
             </div>
         </section>
 
-        <!-- Evaluation Process Timeline (Anxiety Reduction) -->
+        <!-- Process Timeline -->
         <section id="process" class="py-24 bg-white scroll-mt-24">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16 animate-on-scroll">
-                    <span class="text-gray-400 font-bold uppercase text-xs tracking-widest">Roadmap to Answers</span>
-                    <h2 class="font-heading font-bold mb-4 mt-2">What to Expect: 3-Step Process</h2>
-                    <p class="text-gray-600">We've removed the red tape. Here is how our expedited timeline works.</p>
+                <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">From Concern to Confidence</h2>
+                    <p class="text-gray-600">We streamlined the diagnosis process to remove the red tape.</p>
                 </div>
 
-                <div class="max-w-4xl mx-auto relative">
-                    <!-- Vertical Line -->
-                    <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gray-100 transform md:-translate-x-1/2"></div>
+                <div class="grid md:grid-cols-4 gap-8 text-center relative">
+                    <!-- Connector Line (Desktop) -->
+                    <div class="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gray-100 z-0"></div>
 
-                    <!-- Step 1 -->
-                    <div class="relative flex flex-col md:flex-row items-center mb-16 animate-on-scroll group">
-                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 pl-20 md:pl-0">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-primary-cyan transition">1. Intake & Insurance</h3>
-                            <p class="text-gray-600 text-sm">Submit our secure online form. Our intake team verifies benefits within 24 hours and calls to schedule.</p>
-                        </div>
-                        <div class="absolute left-0 md:left-1/2 w-16 h-16 bg-white border-4 border-primary-cyan rounded-full flex items-center justify-center font-bold text-xl text-primary-cyan z-10 transform md:-translate-x-1/2 shadow-lg">1</div>
-                        <div class="md:w-1/2 md:pl-12 order-3 md:order-2 hidden md:block text-gray-400 text-sm italic">Day 1-2</div>
+                    <!-- Steps -->
+                    <div class="relative bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:-translate-y-2 transition-transform duration-300 z-10 animate-on-scroll">
+                        <div class="w-16 h-16 bg-primary-cyan text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow border-4 border-white">1</div>
+                        <h3 class="font-bold text-xl mb-2">Intake & Verify</h3>
+                        <p class="text-sm text-gray-600">Fill out our form. We verify insurance eligibility within 24 hours.</p>
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="relative flex flex-col md:flex-row items-center mb-16 animate-on-scroll group">
-                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 hidden md:block text-gray-400 text-sm italic">Day 3-5</div>
-                        <div class="absolute left-0 md:left-1/2 w-16 h-16 bg-white border-4 border-accent-yellow rounded-full flex items-center justify-center font-bold text-xl text-accent-yellow z-10 transform md:-translate-x-1/2 shadow-lg">2</div>
-                        <div class="md:w-1/2 md:pl-12 order-3 md:order-2 pl-20 md:pl-0">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-accent-yellow transition">2. The Evaluation</h3>
-                            <p class="text-gray-600 text-sm">A 60-90 minute play-based session at our clinic. Parents are present. We use toys, puzzles, and conversation.</p>
-                        </div>
+                    <div class="relative bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:-translate-y-2 transition-transform duration-300 z-10 animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="w-16 h-16 bg-primary-cyan text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow border-4 border-white">2</div>
+                        <h3 class="font-bold text-xl mb-2">The Evaluation</h3>
+                        <p class="text-sm text-gray-600">A 60-90 minute play-based session at our clinic. Parents are present.</p>
                     </div>
 
-                    <!-- Step 3 -->
-                    <div class="relative flex flex-col md:flex-row items-center animate-on-scroll group">
-                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 pl-20 md:pl-0">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-green-500 transition">3. Diagnosis & Report</h3>
-                            <p class="text-gray-600 text-sm">You receive a full medical report. If diagnosed, we guide you directly into ABA therapy or school support.</p>
-                        </div>
-                        <div class="absolute left-0 md:left-1/2 w-16 h-16 bg-white border-4 border-green-500 rounded-full flex items-center justify-center font-bold text-xl text-green-500 z-10 transform md:-translate-x-1/2 shadow-lg">3</div>
-                        <div class="md:w-1/2 md:pl-12 order-3 md:order-2 hidden md:block text-gray-400 text-sm italic">Day 7-10</div>
+                    <div class="relative bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:-translate-y-2 transition-transform duration-300 z-10 animate-on-scroll" style="transition-delay: 200ms;">
+                        <div class="w-16 h-16 bg-primary-cyan text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow border-4 border-white">3</div>
+                        <h3 class="font-bold text-xl mb-2">Results Meeting</h3>
+                        <p class="text-sm text-gray-600">We review the full medical report and explain the diagnosis clearly.</p>
+                    </div>
+
+                    <div class="relative bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:-translate-y-2 transition-transform duration-300 z-10 animate-on-scroll" style="transition-delay: 300ms;">
+                        <div class="w-16 h-16 bg-primary-cyan text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow border-4 border-white">4</div>
+                        <h3 class="font-bold text-xl mb-2">Direct Handoff</h3>
+                        <p class="text-sm text-gray-600">If diagnosed, seamless entry into our ABA therapy programs.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Insurance Grid (SEO + Utility) -->
-        <section id="insurance-cost" class="py-24 bg-soft-blue scroll-mt-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 animate-on-scroll">
-                    <h2 class="font-heading font-bold mb-4">Accepted Insurance Plans</h2>
-                    <p class="text-gray-600">We handle the authorization paperwork for you. We accept Medicaid in both states.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Utah List -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll">
-                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                            <svg class="w-6 h-6 text-primary-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                            Utah Providers
-                        </h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Medicaid (UT)</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Select Health</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> U of U Health</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Cigna</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Aetna</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> EMI Health</div>
-                        </div>
-                    </div>
-
-                    <!-- Ohio List -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll" style="transition-delay: 100ms">
-                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                            <svg class="w-6 h-6 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                            Ohio Providers
-                        </h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Medicaid (OH)</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> CareSource</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Molina</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Anthem BCBS</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Medical Mutual</div>
-                            <div class="flex items-center gap-2 text-gray-700 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> United Health</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-8 text-sm text-gray-500">
-                    <p>Don't see your plan? <a href="#contact" class="underline hover:text-primary-cyan">Contact our billing team</a> for a free benefits check.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Locations & Maps (Local SEO) -->
-        <section id="locations" class="py-24 bg-white scroll-mt-24">
+        <!-- Locations & Maps -->
+        <section id="locations" class="py-24 bg-light-bg scroll-mt-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-10 animate-on-scroll">
-                    <h2 class="font-heading font-bold mb-2">Our Testing Centers</h2>
-                    <p class="text-gray-600">State-of-the-art clinics designed for child comfort.</p>
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl mb-2">Our Testing Centers</h2>
+                    <p class="text-gray-600">Select your state to find the nearest clinic.</p>
                 </div>
 
                 <!-- Tabs -->
@@ -554,11 +475,11 @@
 
                 <!-- Utah Content -->
                 <div id="utah" class="tab-content active max-w-5xl mx-auto animate-on-scroll">
-                    <div class="bg-light-bg rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-lg">
+                    <div class="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
                         <div class="md:w-1/2 min-h-[300px] relative">
                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.0218067701926!2d-111.9034513!3d40.6514497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875289a4907bad01%3A0x47e28e2c26c123f0!2sOn%20Target%20ABA%20Therapy%20in%20Murray%2C%20UT!5e0!3m2!1sen!2sus!4v1764191196535!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Murray Map"></iframe>
                         </div>
-                        <div class="p-8 md:w-1/2">
+                        <div class="p-8 md:w-1/2 flex flex-col justify-center">
                             <span class="text-primary-cyan font-bold text-sm tracking-wider mb-2 block">SALT LAKE COUNTY</span>
                             <h3 class="text-2xl font-bold mb-4">Murray Headquarters</h3>
                             <address class="not-italic text-gray-600 mb-6 space-y-3">
@@ -578,7 +499,7 @@
                 <div id="ohio" class="tab-content max-w-5xl mx-auto">
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Columbus -->
-                        <div class="bg-light-bg rounded-2xl p-8 shadow-lg border-t-4 border-accent-yellow">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent-yellow">
                             <span class="text-primary-cyan font-bold text-sm tracking-wider mb-2 block">CENTRAL OHIO</span>
                             <h3 class="text-2xl font-bold mb-4">Columbus (Airport Dr)</h3>
                             <p class="text-gray-600 mb-4">2760 Airport Dr, Suite 110<br>Columbus, OH 43219</p>
@@ -586,7 +507,7 @@
                             <a href="#contact" class="block text-center border border-dark-text text-dark-text font-bold py-2 rounded hover:bg-dark-text hover:text-white transition">Schedule Here</a>
                         </div>
                         <!-- Cleveland -->
-                        <div class="bg-light-bg rounded-2xl p-8 shadow-lg border-t-4 border-accent-yellow">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent-yellow">
                             <span class="text-primary-cyan font-bold text-sm tracking-wider mb-2 block">NORTHEAST OHIO</span>
                             <h3 class="text-2xl font-bold mb-4">Cleveland (Mayfield)</h3>
                             <p class="text-gray-600 mb-4">767 Beta Dr, Suite C<br>Mayfield, OH 44143</p>
@@ -598,15 +519,45 @@
             </div>
         </section>
 
-        <!-- FAQ Section (Schema Markup Visible) -->
-        <section id="faq" class="py-24 bg-soft-blue scroll-mt-24">
+        <!-- Lead Magnet / Resource Section -->
+        <section class="py-20 bg-primary-cyan text-white relative overflow-hidden">
+             <!-- Decorative Circles -->
+             <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+             <div class="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+
+             <div class="container mx-auto px-6 relative z-10">
+                 <div class="grid md:grid-cols-2 gap-12 items-center">
+                     <div>
+                         <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">New to this journey?</h2>
+                         <p class="text-lg mb-8 text-blue-50">Download our free "Parent's Guide to Autism Diagnosis." It covers insurance codes, what to bring to the appointment, and how to prepare your child.</p>
+                         <form class="flex flex-col sm:flex-row gap-3">
+                             <input type="email" placeholder="Enter your email" class="px-6 py-4 rounded-lg text-dark-text outline-none focus:ring-4 focus:ring-accent-yellow/50 flex-grow" required>
+                             <button type="submit" class="bg-accent-yellow text-dark-text font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition">Get the Guide</button>
+                         </form>
+                     </div>
+                     <div class="hidden md:flex justify-center">
+                         <div class="w-64 h-80 bg-white shadow-2xl rounded-r-2xl rounded-l-md border-l-8 border-gray-200 flex items-center justify-center relative transform rotate-3 hover:rotate-0 transition duration-500">
+                             <!-- Book Cover Mockup -->
+                             <div class="text-center p-6">
+                                 <div class="text-primary-cyan font-bold text-xl mb-2">PARENT GUIDE</div>
+                                 <div class="w-12 h-1 bg-accent-yellow mx-auto mb-4"></div>
+                                 <div class="text-gray-400 text-sm">Navigating the Path Forward</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-white scroll-mt-24">
             <div class="container mx-auto px-6 max-w-3xl">
                 <h2 class="font-heading text-3xl font-bold text-center mb-10">Common Questions</h2>
                 
                 <div class="space-y-4">
                     <!-- FAQ 1 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
-                        <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center font-bold focus:outline-none" aria-expanded="false">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden group">
+                        <button class="accordion-btn w-full px-6 py-5 text-left bg-white group-hover:bg-gray-50 flex justify-between items-center font-bold focus:outline-none transition-colors" aria-expanded="false">
                             <span class="text-lg">Do I need a referral from a pediatrician?</span>
                             <svg class="accordion-icon w-6 h-6 text-primary-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
@@ -618,8 +569,8 @@
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
-                        <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center font-bold focus:outline-none" aria-expanded="false">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden group">
+                        <button class="accordion-btn w-full px-6 py-5 text-left bg-white group-hover:bg-gray-50 flex justify-between items-center font-bold focus:outline-none transition-colors" aria-expanded="false">
                             <span class="text-lg">How long does the appointment last?</span>
                             <svg class="accordion-icon w-6 h-6 text-primary-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
@@ -631,8 +582,8 @@
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
-                        <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center font-bold focus:outline-none" aria-expanded="false">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden group">
+                        <button class="accordion-btn w-full px-6 py-5 text-left bg-white group-hover:bg-gray-50 flex justify-between items-center font-bold focus:outline-none transition-colors" aria-expanded="false">
                             <span class="text-lg">What happens if my child is diagnosed?</span>
                             <svg class="accordion-icon w-6 h-6 text-primary-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
@@ -647,7 +598,7 @@
         </section>
 
         <!-- Final Conversion Section -->
-        <section id="contact" class="py-24 bg-white scroll-mt-24">
+        <section id="contact" class="py-24 bg-soft-blue scroll-mt-24">
             <div class="container mx-auto px-6">
                 <div class="bg-dark-text rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2 text-white relative">
                     <!-- Background Decoration -->
@@ -815,7 +766,7 @@
     <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu
+            // Mobile Menu Toggle
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             const closeBtn = document.getElementById('close-menu');
@@ -864,7 +815,7 @@
                 });
             });
 
-            // GSAP Animations with Intersection Observer fallback
+            // GSAP Animations
             if(typeof gsap !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
                 const animateElements = document.querySelectorAll('.animate-on-scroll');
